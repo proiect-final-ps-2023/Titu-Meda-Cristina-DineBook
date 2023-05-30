@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "angular2-jwt": "^0.2.3",
+    "jwt-decode": "^3.1.2"
+  }
+}

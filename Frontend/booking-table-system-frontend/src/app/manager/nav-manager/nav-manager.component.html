@@ -1,0 +1,24 @@
+<header class="header-area overlay">
+	<nav class="navbar navbar-expand-md navbar-dark">
+		<div class="container">
+			<a routerLink="/manager" class="navbar-brand">Restaurant Managers</a>
+				
+			<button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#main-nav">
+				<span class="menu-icon-bar"></span>
+				<span class="menu-icon-bar"></span>
+				<span class="menu-icon-bar"></span>
+			</button>
+				
+			<div id="main-nav" class="collapse navbar-collapse">
+				<ul class="navbar-nav ml-auto">
+					<li><a routerLink="/manager" routerLinkActive="active" class="nav-item nav-link active">My profile</a></li>
+					<li><a routerLink="/" routerLinkActive="active" class="nav-item nav-link" (submit)="submit_logout()">Logout</a></li>
+                    <li><a routerLink="/manager/manage-restaurants" routerLinkActive="active" class="nav-item nav-link">Manage restaurants</a></li> <!-- view bookings for each restaurant -->
+					<li><a routerLink="/manager/manage-restaurant-bookings" routerLinkActive="active" class="nav-item nav-link">Restaurant bookings</a></li>
+					<li><a routerLink="/contact" routerLinkActive="active" class="nav-item nav-link">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</header>
+

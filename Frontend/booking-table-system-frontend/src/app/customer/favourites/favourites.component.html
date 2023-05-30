@@ -1,0 +1,30 @@
+<app-nav-customer></app-nav-customer>
+
+<div class="container">
+    <div class="row">
+        <div *ngFor="let restaurant of restaurants" class="col-md-6 col-xl-3">
+            <div class="card m-b-30">
+                <div class="card-body row">
+                    <div class="col-sm card-title align-self-center mb-0">
+                        <h3>{{restaurant.name}}</h3>
+                    </div>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Email: {{restaurant.email}}</li>
+                    <li class="list-group-item">Phone: {{restaurant.phoneNo}}</li>
+                    <li class="list-group-item">Country: {{restaurant.country}}</li>
+                    <li class="list-group-item">City: {{restaurant.city}}</li>
+                    <li class="list-group-item">Address: {{restaurant.address}}</li>
+                    <li class="list-group-item">Description: {{restaurant.description}}</li>
+                    <li class="list-group-item">Maximum customers number: {{restaurant.maxCustomersNo}}</li>
+                    <li class="list-group-item">Maximum tables number: {{restaurant.maxTablesNo}}</li>
+                </ul>
+                <div class="card-body">
+                    <div class="btn-group btn-group-sm">
+                        <a class="btn btn-primary tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Fave" (click)="deleteFromFavourites(restaurant)"><i class="fa fa-xmark"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

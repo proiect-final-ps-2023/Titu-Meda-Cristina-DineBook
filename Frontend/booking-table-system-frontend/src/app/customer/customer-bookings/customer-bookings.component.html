@@ -1,0 +1,30 @@
+<app-nav-customer></app-nav-customer>
+
+<div class="container">
+    <div class="row">
+        <div *ngFor="let booking of bookings" class="col-md-6 col-xl-3">
+            <div class="card m-b-30">
+                <div class="card-body row">
+                    <!-- <div class="col-sm">
+                        <a href=""><img src="" alt="" class="img-fluid rounded-circle w-60"></a>
+                    </div> -->
+                    <div class="col-sm card-title align-self-center mb-0">
+                        <h3>Booking no {{bookings.indexOf(booking)}}</h3>
+                    </div>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Id: {{booking.id}}</li>
+                    <li class="list-group-item">Restaurant id: {{booking.restaurantId}}</li>
+                    <li class="list-group-item">Date and hour: {{booking.dateHour}}</li>
+                    <li class="list-group-item">Number of customers: {{booking.customersNo}}</li>
+                    <li class="list-group-item">Number of tables: {{booking.tablesNo}}</li>
+                </ul>
+                <div class="card-body">
+                    <div class="btn-group btn-group-sm">
+                        <button type="submit" class="btn btn-outline-primary btn-lg btn-block" (click)="cancelBooking(booking)">Cancel booking</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

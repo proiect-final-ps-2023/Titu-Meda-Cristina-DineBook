@@ -1,0 +1,30 @@
+<header class="header-area overlay">
+	<nav class="navbar navbar-expand-md navbar-dark">
+		<div class="container">
+			<a routerLink="/customer" class="navbar-brand">Customers</a>
+			
+			<button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#main-nav">
+				<span class="menu-icon-bar"></span>
+				<span class="menu-icon-bar"></span>
+				<span class="menu-icon-bar"></span>
+			</button>
+				
+			<div id="main-nav" class="collapse navbar-collapse">
+				<ul class="navbar-nav ml-auto">
+					<li><a routerLink="/customer" routerLinkActive="active" class="nav-item nav-link active">My profile</a></li>
+					<li><a routerLink="/" routerLinkActive="active" class="nav-item nav-link" (submit)="submit_logout()">Logout</a></li>
+					<li class="dropdown">
+						<a routerLink="/customer" routerLinkActive="active" class="nav-item nav-link" data-toggle="dropdown">Restaurants</a>
+						<div class="dropdown-menu">
+							<a routerLink="/restaurants" routerLinkActive="active" class="dropdown-item">Search</a>
+							<a routerLink="/favourites" routerLinkActive="active" class="dropdown-item">Favourites</a>
+						</div>
+					</li>
+                    <li><a routerLink="/customer/bookings" routerLinkActive="active" class="nav-item nav-link">My bookings</a></li>
+					<li><a routerLink="/contact" routerLinkActive="active" class="nav-item nav-link">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</header>
+

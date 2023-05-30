@@ -1,0 +1,32 @@
+<app-nav-manager></app-nav-manager>
+
+<div class="container">
+    <div class="search-container">
+        <label style="color: teal;font-weight: 600;font-size: 20px;" for="restaurantName" >Select restaurant</label> &nbsp;
+        <form >
+             <select style="color: teal;font-weight: 600;font-size: 20px;" [(ngModel)]="restaurantName" name="restaurantName" id="restaurantName" class="form-control">
+                <option style="color: teal;font-weight: 600;font-size: 20px;" *ngFor="let restaurant of restaurants" value={{restaurant.name}}>{{restaurant.name}}</option>
+            </select>
+        </form >
+    </div>
+    <button class="rounded-button" (click)="searchBookingsByRestaurantName(restaurantName)">See bookings</button>
+    <div class="row">
+        <div *ngFor="let booking of bookings" class="col-md-6 col-xl-3">
+            <div class="card m-b-30">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Id: {{booking.id}}</li>
+                    <li class="list-group-item">Restaurant id: {{booking.restaurantId}}</li>
+                    <li class="list-group-item">Date and hour: {{booking.dateHour}}</li>
+                    <li class="list-group-item">Number of customers: {{booking.customersNo}}</li>
+                    <li class="list-group-item">Number of tables: {{booking.tablesNo}}</li>
+                </ul>
+                <div class="card-body">
+                    <div class="btn-group btn-group-sm">
+                        <button type="submit" class="btn btn-outline-primary btn-lg btn-block" (click)="cancelBooking(booking)">Cancel booking</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,105 @@
+<app-nav-manager></app-nav-manager>
+<router-outlet></router-outlet>
+
+<div class="container bootstrap snippets bootdey">
+    <div class="panel-body inf-content">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="responsive-table">
+                    <table class="table table-user-information">
+                    <tbody>
+                        <tr>        
+                            <td>
+                                <strong>
+                                    <span class="col-1"></span>
+                                    <i class="fa fa-key"></i>Id                                          
+                                </strong>
+                            </td>
+                            <td class="col-2">
+                                {{manager?.id}}     
+                            </td>
+                        </tr>
+                        <tr>    
+                            <td>
+                                <strong>
+                                    <span class="col-1"></span>    
+                                    <i class="fa fa-person"></i>Full name                                                
+                                </strong>
+                            </td>
+                            <td class="col-2">
+                                {{manager?.fullName}}  
+                            </td>
+                        </tr>
+                        <tr>        
+                            <td>
+                                <strong>
+                                    <span class="col-1"></span> 
+                                    <i class="fa fa-user"></i>Username                                                
+                                </strong>
+                            </td>
+                            <td class="col-2">
+                                {{manager?.username}}
+                            </td>
+                        </tr>
+                        <tr>        
+                            <td>
+                                <strong>
+                                    <span class="col-1"></span> 
+                                    <i class="fa fa-id-card"></i>Role                                                
+                                </strong>
+                            </td>
+                            <td class="col-2">
+                                  manager
+                            </td>
+                        </tr>
+                        <tr>        
+                            <td>
+                                <strong>
+                                    <span class="col-1"></span> 
+                                    <i class="fa fa-envelope"></i>Email                                                
+                                </strong>
+                            </td>
+                            <td class="col-2">
+                                {{manager?.email}} 
+                            </td>
+                        </tr>
+                        <tr>        
+                            <td>
+                                <strong>
+                                    <span class="col-1"></span>
+                                    <i class="fa fa-phone"></i>Phone number                                                
+                                </strong>
+                            </td>
+                            <td class="col-2">
+                                {{manager?.phoneNo}}
+                            </td>
+                        </tr>
+                        <tr>        
+                            <td>
+                                <strong>
+                                    <span class="col-1"></span>
+                                    <i class="fa fa-map"></i>Country                                                
+                                </strong>
+                            </td>
+                            <td class="col-2">
+                                {{manager?.country}}
+                            </td>
+                        </tr>      
+                        <tr>        
+                            <td>
+                                <strong>
+                                    <span class="col-1"></span>
+                                    <i class="fa fa-location-dot"></i>City                                                
+                                </strong>
+                            </td>
+                            <td class="col-2">
+                                {{manager?.city}}
+                            </td>
+                        </tr>                                
+                    </tbody>
+                </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>  

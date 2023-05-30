@@ -1,0 +1,48 @@
+<head>
+    <title>Contact Us</title>
+    <link rel="stylesheet" type="text/css" href="contact.component.css">
+  </head>
+  <body>
+    <header>
+      <h1>Contact Us</h1>
+    </header>
+  
+    <main>
+      <section class="contact-form">
+        <h2>Get in Touch</h2>
+        <form [formGroup]="saveForm" novalidate>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" formControlName="name" id="name" name="name" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" formControlName="email" id="email" name="email" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <input id="text" formControlName="message" name="message" class="form-control" required>
+          </div>
+          <button type="submit" (click)="saveContactMessage()">Send Message</button>
+        </form>
+      </section>
+  
+      <section class="contact-details">
+        <h2>Contact Information</h2>
+        <p>
+          Phone: <span class="contact-info">+40756109865</span>
+        </p>
+        <p>
+          Email: <span class="contact-info">dinebook@yahoo.com</span>
+        </p>
+        <p>
+          Address: <span class="contact-info">123 Street Somes, Cluj-Napoca, Romania</span>
+        </p>
+        <button (click)="back()" type="submit">Back</button>
+      </section>
+    </main>
+  
+    <footer>
+      <p>&copy; 2023 DineBook. All rights reserved.</p>
+    </footer>
+  </body>
